@@ -113,18 +113,15 @@ class _MyHomePageState extends State<MyHomePage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Image.network(
-                                item.imageLink!,
+                                item.imageLink ?? "",
                                 height: 200,
                                 width: double.infinity,
-                                fit: BoxFit.cover,
-                                errorBuilder: (context, error, stackTrace) =>
-                                    const Icon(Icons.image, size: 100),
                               ),
                               const SizedBox(height: 8),
                               Padding(
                                 padding: const EdgeInsets.only(left: 30),
                                 child: Text(
-                                  item.name!,
+                                  item.name ?? "",
                                   style: const TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w500,
@@ -135,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               Padding(
                                 padding: const EdgeInsets.only(left: 30),
                                 child: Text(
-                                  item.brand!,
+                                  item.brand ?? "",
                                   style: const TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w200,
@@ -146,7 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               Padding(
                                 padding: const EdgeInsets.only(left: 30),
                                 child: Text(
-                                  item.rating!,
+                                  item.rating ?? "",
                                   style: const TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w900,
@@ -157,7 +154,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               Padding(
                                 padding: const EdgeInsets.only(left: 30),
                                 child: Text(
-                                  item.description!,
+                                  item.description ?? "",
                                   style: const TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w500,
